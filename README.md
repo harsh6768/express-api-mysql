@@ -17,13 +17,15 @@
 
 2. Run these command on your terminal where pem file exist
 
-       chmod 400 ec2-1.pem                       //here ec2-1.pem is file name. you can give any name to file
+       chmod 400 ec2-1.pem  //here ec2-1.pem is file name. you can give any name to file
 
 3. Run below command to connect with ec2 instance 
 
        ssh -i ec2-1.pem ubuntu@ec2-18-191-201-10.us-east-2.compute.amazonaws.co
   
 ---->ec2-1.pem                                                        // pem file
+
 ---->ubuntu                                                           //by default username
+
 ---->ec2-18-191-201-10.us-east-2.compute.amazonaws.co                 //DNS Public domain name
       

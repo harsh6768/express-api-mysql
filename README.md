@@ -11,5 +11,5 @@
        npm install
 
 
-### :::::::Deploy Node.js Project to AMAZON EC2::::::
+###                             :::::::Deploy Node.js Project to AMAZON EC2::::::
       

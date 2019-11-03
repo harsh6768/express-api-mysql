@@ -86,6 +86,12 @@ Client does not support authentication protocol requested by server; consider up
 
      ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new_password';
 
+### You are good to go . Run your server. 
+
+####  http://18.191.201.10:3002/getPosts will return all the post in the database
+
+here 18.191.201.10 is the IPv4 Public IP of EC2
+
 
 
 

@@ -67,5 +67,16 @@ You will something like this ...follow these commands to connect with ec2.
 
        sudo mysql -u root -p
 
+## Now Clone any node.js project in ec2 instance and install all the dependency but before that you need to install node and npm in your ec2 instance
+
+## Now set custom port in ec2 instance in which your express server is running after selecting security group from the left navigation view.
+
+<img src="https://github.com/harsh6768/express-api-mysql/blob/master/Images/Screenshot%20from%202019-11-02%2020-38-22.png"/>
+
+You can see we have Custom TCP rule in port 3002. You can set any port in which you are running your express server.
+
+
+
+
       
       

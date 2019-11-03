@@ -76,6 +76,18 @@ You will something like this ...follow these commands to connect with ec2.
 You can see we have Custom TCP rule in port 3002. You can set any port in which you are running your express server.
 
 
+### Now run your project . If you have installed mysql successfully then server will run successfully.
+
+### If you get error 
+Client does not support authentication protocol requested by server; consider upgrading MySQL client
+
+### Then you need to change the root plugin in mysql 
+#### Run below command
+
+     ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new_password';
+
+
+
 
 
       

@@ -29,4 +29,6 @@
 
 ---->ec2-18-191-201-10.us-east-2.compute.amazonaws.co                 //DNS Public domain name
 
+Or just click the connect button to get all the necessary information to connect with the EC2 in your system
+
 <img src="https://github.com/harsh6768/express-api-mysql/blob/master/Images/Screenshot%20from%202019-11-02%2020-47-32.png"/>

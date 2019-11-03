@@ -32,3 +32,7 @@
 Or just click the connect button to get all the necessary information to connect with the EC2 in your system
 
 <img src="https://github.com/harsh6768/express-api-mysql/blob/master/Images/Screenshot%20from%202019-11-02%2020-47-32.png"/>
+
+You will something like this ...follow these commands to connect with ec2. 
+
+<img src="https://github.com/harsh6768/express-api-mysql/blob/master/Images/Screenshot%20from%202019-11-03%2014-11-07.png"/>

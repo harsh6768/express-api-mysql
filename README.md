@@ -29,5 +29,4 @@
 
 ---->ec2-18-191-201-10.us-east-2.compute.amazonaws.co                 //DNS Public domain name
 
-(hello)[https://github.com/harsh6768/express-api-mysql/blob/master/Images/Screenshot%20from%202019-11-02%2020-47-32.png]
-      
+<img src="https://github.com/harsh6768/express-api-mysql/blob/master/Images/Screenshot%20from%202019-11-02%2020-47-32.png"/>

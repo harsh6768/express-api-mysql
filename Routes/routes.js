@@ -1,16 +1,18 @@
-const express=require('express');
-const app=express();
+const router                =       require('express').Router();
+const controllers           =       require('../Controllers/controller');
+const authController        =       require('../Controllers/authController');
+const verifyToken           =       require('../Middleware/verifyToken');
+const redisCache            =       require('../Middleware/redisCache');
 
-const controllers=require('../Controllers/controller');
+router.route('/getPosts').get(redisCache,controllers.getPosts);
+router.route('/getPost/:id').get(verifyToken,controllers.getPost);
+router.route('/addPost').post(verifyToken,controllers.addPost);
+router.route('/updatePost/:id').put(verifyToken,controllers.updatePost);
+router.route('/deletePost/:id').delete(verifyToken,controllers.deletePost);
 
-const router=express.Router();
-
-
-router.route('/getPosts').get(controllers.getPosts);
-router.route('/getPost/:id').get(controllers.getPost);
-router.route('/addPost').post(controllers.addPost);
-router.route('/updatePost/:id').put(controllers.updatePost);
-router.route('/deletePost/:id').delete(controllers.deletePost);
+//User routes
+router.route('/user/register').post(authController.registerUser);
+router.route('/user/login').post(authController.loginUser);
 
 module.exports=router;
 

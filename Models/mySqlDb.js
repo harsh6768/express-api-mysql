@@ -1,7 +1,7 @@
-const Bluebird=require('bluebird');
-const mysql=require('mysql');
+const Bluebird              =       require('bluebird');
+const mysql                 =       require('mysql');
 
-const connection= mysql.createConnection({
+const connection=mysql.createConnection({
     host : 'localhost',
     user : 'root',
     password :'',

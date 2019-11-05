@@ -1,5 +1,5 @@
 
-const db=require('../Models/db');
+const db                    =       require('../Models/mySqlDb');
 
 let getPosts=async (req,res)=>{
     

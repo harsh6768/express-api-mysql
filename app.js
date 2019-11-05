@@ -1,9 +1,9 @@
-const express=require('express');
-const bodyParser=require('body-parser');
-const morgan=require('morgan');
-
-const route=require('./Routes/routes');
-const app=express();
+const express               =       require('express');
+const bodyParser            =       require('body-parser');
+const morgan                =       require('morgan');
+const expressIp             =       require('express-ip');
+const route                 =       require('./Routes/routes');
+const app                   =       express();
 
 //logger for delopment
 app.use(morgan('dev'));
@@ -11,6 +11,9 @@ app.use(morgan('dev'));
 //body parser to parse the body of the request
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+// express-ip middleware to get system ip
+app.use(expressIp().getIpInfoMiddleware);
 
 //it will use / as default route
 app.use('/',route);

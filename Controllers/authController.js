@@ -3,7 +3,7 @@ const bcrypt                 =       require('bcrypt');
 const jwt                    =       require('jsonwebtoken');
 const keys                   =       require('../Config/keys');
 const redisClient            =       require('../Models/redisDb');
-
+const os                     =       require('os');
 let registerUser=async(req,res)=>{
 
     const {
@@ -61,6 +61,9 @@ let registerUser=async(req,res)=>{
 }
 
 let loginUser=async(req,res)=>{
+
+    console.log(os.networkInterfaces());
+    // console.log(req.ipInfo);
 
     const{
         email,

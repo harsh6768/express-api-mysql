@@ -62,6 +62,12 @@ let registerUser=async(req,res)=>{
 
 let loginUser=async(req,res)=>{
 
+<<<<<<< Updated upstream
+=======
+    // console.log(os.networkInterfaces());
+    // console.log(req.ipInfo);
+
+>>>>>>> Stashed changes
     const{
         email,
         password
@@ -81,7 +87,12 @@ let loginUser=async(req,res)=>{
             
             //creating jwt token
             const token=jwt.sign({id:user[0].id},keys.jwt.SECRET_TOKEN);
-            
+            /**
+             * *****************************************************
+             * ****************Single Sign On***********************
+             * *****************************************************
+             * *****************************************************
+             */
             /**
              * For Sigle Sign-On Authentication --->Like Whatsapp Mobile Functionality 
              * We are using the redis client to check whether user already logged in or not
@@ -93,8 +104,25 @@ let loginUser=async(req,res)=>{
 
             //We don't need to check whether token is present or not
             //setting the token in the set
-            await redisClient.hmset('auth_token',user[0].id,token);
-            res.header({'auth_token':token,id:user[0].id}).send({
+
+            // await redisClient.hmset('auth_token',user[0].id,token);
+
+
+            /**
+             * ******************************************************
+             * *****************Multi Session Login******************
+             * ******************************************************
+             * ******************************************************
+             * 
+             */
+            /**
+             * @param we use redis set for multi session login 
+             * @operation --> add id-token in set
+             */
+            
+            redisClient.sadd('multi_auth_token',`${user[0].id}-${token}`);
+
+            res.header('auth_token',token).send({
                 status:200,
                 body:{
                     token

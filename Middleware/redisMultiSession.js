@@ -19,23 +19,29 @@ let redisCache=async(req,res,next)=>{
         })
 
         //getting the auth_token and then check for it's availability
-        // redisClient.sismember('multi_auth_token',`${id}-${token}`,(err,isMatchedToken)=>{
+        redisClient.sismember('multi_auth_token',`${id}-${token}`,(err,isMatchedToken)=>{
           
-        //     // console.log('Value matched!!',isMatchedToken)
-        //     if(isMatchedToken){
-        //         req.user=true;
-        //         next();
-        //     }else{
-        //         res.send({
-        //             message:'Access Token is invalid!'
-        //         })
-        //     }
-        // });
+            console.log('Value matched!!',isMatchedToken)
+            if(isMatchedToken){
+                req.user=true;
+                next();
+            }else{
+                res.send({
+                    message:'Access Token is invalid!'
+                })
+            }
+        });
+        //keys will help to search for pattern matching in the redis
+        // redisClient.keys('multi_auth_token',`${id}`,(err,totalAuthToken)=>{
+
+        //     console.log(totalAuthToken);
+
+        // })
         
-        console.log('hello redis database');
-        redisClient.SSCAN('multi_auth_token',0,[match,`${id}-`],(err,authToken)=>{
-            console.log(authToken);
-        })
+        // console.log('hello redis database');
+        // redisClient.SSCAN('multi_auth_token',0,{match:`${id}*`},(err,authToken)=>{
+        //     console.log(authToken);
+        // })
 
     }catch(err){
 

@@ -62,12 +62,6 @@ let registerUser=async(req,res)=>{
 
 let loginUser=async(req,res)=>{
 
-<<<<<<< Updated upstream
-=======
-    // console.log(os.networkInterfaces());
-    // console.log(req.ipInfo);
-
->>>>>>> Stashed changes
     const{
         email,
         password

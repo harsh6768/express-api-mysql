@@ -1,6 +1,11 @@
 
 const db                    =       require('../Models/mySqlDb');
 
+let sayHelloToClient=(req,res)=>{
+
+    res.send(`Hello! You come a log way to say Hello!`)
+}
+
 let getPosts=async (req,res)=>{
     
     let sql='SELECT * FROM posts';
@@ -75,6 +80,7 @@ let deletePost=(req,res)=>{
 }
 
 module.exports={
+    sayHelloToClient,
     getPosts,
     getPost,
     addPost,

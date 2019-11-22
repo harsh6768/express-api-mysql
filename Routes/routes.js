@@ -5,6 +5,7 @@ const verifyToken                       =       require('../Middleware/verifyTok
 const redisSingleSignOn                 =       require('../Middleware/redisSingleSignOn');
 const redisMultiSessionSignOn           =       require('../Middleware/redisMultiSession');
 
+router.route('/').get(controllers.sayHelloToClient);
 router.route('/getPosts').get(redisMultiSessionSignOn,controllers.getPosts);
 router.route('/getPost/:id').get(redisSingleSignOn,controllers.getPost);
 router.route('/addPost').post(redisSingleSignOn,controllers.addPost);

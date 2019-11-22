@@ -69,6 +69,27 @@ You will something like this ...follow these commands to connect with ec2.
 
 ## Now Clone any node.js project in ec2 instance and install all the dependency but before that you need to install node and npm in your ec2 instance
 
+## In db.js file you should provide the valid details in mysql.createConnection() method
+
+                     const Bluebird=require('bluebird');
+                     const mysql=require('mysql');
+
+                     const connection= mysql.createConnection({
+                         host : 'localhost',
+                         user : 'root',           //by default user name
+                         password :'',            //put password that you have created while installing the mysql in ec2
+                         database : 'node'       // provide database name ,created in ec2
+                      });
+
+                     connection.connect((err)=>{
+                         if(err) throw err;
+                         console.log('MySQL Connected ...');
+                     });
+
+                     global.db=Bluebird.promisifyAll(connection);
+                     module.exports=db;
+                     
+                     
 ## Now set custom port in ec2 instance in which your express server is running after selecting security group from the left navigation view.
 
 <img src="https://github.com/harsh6768/express-api-mysql/blob/master/Images/Screenshot%20from%202019-11-02%2020-38-22.png"/>

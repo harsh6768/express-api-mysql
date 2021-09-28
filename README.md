@@ -114,7 +114,20 @@ Client does not support authentication protocol requested by server; consider up
 here 18.191.201.10 is the IPv4 Public IP of EC2
 
 
+## INSTALL NODEJS IF THERE IS NO APT-GET COMMAND FOUND OR THE EASY WAY TO INSTALL THE NODEJS AND THE DOCKER INTO THE EC2
 
+
+#### 1. Install Docker 
+
+   https://gist.github.com/npearce/6f3c7826c7499587f00957fee62f8ee9
+
+#### 2. Install Nodejs using NVM
+
+  https://github.com/nvm-sh/nvm
+
+  nvm install --lts               //install using nodejs
+
+  
 
 
       

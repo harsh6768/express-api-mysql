@@ -125,7 +125,7 @@ here 18.191.201.10 is the IPv4 Public IP of EC2
 
   https://github.com/nvm-sh/nvm
 
-                     nvm install --lts               //install using nodejs
+            nvm install --lts               //install using nodejs
 
   
 

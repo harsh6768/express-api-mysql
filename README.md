@@ -65,7 +65,7 @@ You will something like this ...follow these commands to connect with ec2.
        
 7. Update root password after selecting mysql database.
       
-       update user set authentication_string=PASSWORD('new-password') where user='root';
+       update user set authentication_string='new-password' where user='root';
        
 8. Flush privileges
       

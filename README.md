@@ -50,20 +50,28 @@ You will something like this ...follow these commands to connect with ec2.
 3. Run below command to run sql queries
      
        sudo mysql --user=root mysql
+      
+4. Show list of databases 
        
-4. Update root password after selecting mysql database.
+       show databases;
+       
+5. Show list of tables
+   
+       show tables;
+       
+5. Update root password after selecting mysql database.
       
        update user set authentication_string=PASSWORD('new-password') where user='root';
        
-5. Flush privileges
+6. Flush privileges
       
        flush privileges;
        exit
-6. Restart mysql 
+7. Restart mysql 
        
        sudo service mysql restart
        
-7. Now you can use mysql using root password
+8. Now you can use mysql using root password
 
        sudo mysql -u root -p
 

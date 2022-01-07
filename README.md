@@ -78,6 +78,13 @@ You will something like this ...follow these commands to connect with ec2.
 10. Now you can use mysql using root password
 
        sudo mysql -u root -p
+       
+### Install MYSQL using yum command if apt-get command not found.
+
+follow below docs. 
+
+https://dev.mysql.com/doc/mysql-repo-excerpt/5.6/en/linux-installation-yum-repo.html
+       
 
 ## Now Clone any node.js project in ec2 instance and install all the dependency but before that you need to install node and npm in your ec2 instance
 

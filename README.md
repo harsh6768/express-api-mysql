@@ -39,43 +39,47 @@ You will something like this ...follow these commands to connect with ec2.
 
 ### :::::::Install MySQL in AMAZON EC2::::::
 
-1. update ubuntu
+1. Install apt in EC2 ubuntu 
+
+   https://low-orbit.net/how-to-install-yum-on-ubuntu
+
+2. update ubuntu
         
         sudo apt-get update
         
-2. Install mysql server
+3. Install mysql server
 
        sudo apt-get install mysql-server
        
-3. Run below command to run sql queries
+4. Run below command to run sql queries
      
        sudo mysql --user=root mysql
       
-4. Show list of databases 
+5. Show list of databases 
        
        show databases;
        
-5. Use database : 
+6. Use database : 
    
        use database_name;
        
-6. Show list of tables
+7. Show list of tables
    
        show tables;
        
-7. Update root password after selecting mysql database.
+8. Update root password after selecting mysql database.
       
        update user set authentication_string='new-password' where user='root';
        
-8. Flush privileges
+9. Flush privileges
       
        flush privileges;
        exit
-9. Restart mysql 
+10. Restart mysql 
        
        sudo service mysql restart
        
-10. Now you can use mysql using root password
+11. Now you can use mysql using root password
 
        sudo mysql -u root -p
        

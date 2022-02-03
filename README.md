@@ -143,6 +143,14 @@ here 18.191.201.10 is the IPv4 Public IP of EC2
 #### 1. Install Docker 
 
    https://gist.github.com/npearce/6f3c7826c7499587f00957fee62f8ee9
+   
+
+### Install Nodejs using ap 
+
+  
+   sudo apt install nodejs
+
+
 
 #### 2. Install Nodejs using NVM
 

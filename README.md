@@ -148,9 +148,9 @@ here 18.191.201.10 is the IPv4 Public IP of EC2
 ### Install Nodejs using ap 
 
   
-   sudo apt install nodejs
+       sudo apt install nodejs
 
-
+       sudo apt install npm
 
 #### 2. Install Nodejs using NVM
 

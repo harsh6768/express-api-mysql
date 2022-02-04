@@ -169,11 +169,57 @@ here 18.191.201.10 is the IPv4 Public IP of EC2
 
 <img src="https://github.com/harsh6768/deploy-in-ec2/blob/master/Images/Screenshot%202022-02-03%20at%201.08.34%20PM.png"/>
 
-
 <img src="https://github.com/harsh6768/deploy-in-ec2/blob/master/Images/Screenshot%202022-02-03%20at%201.09.21%20PM.png"/>
+
+  ### Configure phpmyadmin in ubuntu ec2
+  
+   Edit apache2.conf file 
+  
+        sudo nano /etc/apache2/apache2.conf
+        
+        or 
+        
+        sudo vi /etc/apache2/apache2.conf
+
+
+   After that, add the following line into apache2.conf file and save it:
+
+       Include /etc/phpmyadmin/apache.conf
+       
+    
+   ### Enable MySQL root Login for phpmyadmin ubuntu aws
+   
+    Note that, By default root cannot login as root user through phpMyAdmin.
+
+    So, open your ssh terminal and type the following command to enable/allow mysql root login access for phpmyadmin on ubuntu aws web server:
+    
+           sudo mysql -u root -p
+   
+           
+           ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+          
+    Note that, Replace password by the root password you entered while installing MySql.
+
+    After that type following query to changes into effect:
+
+          FLUSH PRIVILEGES;
+
+  ### Restart Apache Web Server
+    
+         sudo service apache2 restart
+         
+  ### Access phpmyadmin Amazon ec2
+  
+     Now you can login as root from phpMyAdmin. So, open your browser and type the below url with your ec2 server ip:
+     
+     http://[SERVER_PUBLIC_IP]/phpmyadmin
+
 
 <img src="https://github.com/harsh6768/deploy-in-ec2/blob/master/Images/Screenshot%202022-02-03%20at%201.15.52%20PM.png"/>
 
 <img src="https://github.com/harsh6768/deploy-in-ec2/blob/master/Images/Screenshot%202022-02-03%20at%201.16.17%20PM.png"/>
 
 
+#### You can follow the bellow for better understanding and for step by step commands that you have to follow
+
+https://www.tutsmake.com/how-to-install-phpmyadmin-amazon-ec2-ubuntu/

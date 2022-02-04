@@ -209,7 +209,7 @@ After that type following query to changes into effect:
          
   ### Access phpmyadmin Amazon ec2
   
-     Now you can login as root from phpMyAdmin. So, open your browser and type the below url with your ec2 server ip:
+Now you can login as root from phpMyAdmin. So, open your browser and type the below url with your ec2 server ip:
      
      http://[SERVER_PUBLIC_IP]/phpmyadmin
 

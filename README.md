@@ -189,18 +189,17 @@ here 18.191.201.10 is the IPv4 Public IP of EC2
     
    ### Enable MySQL root Login for phpmyadmin ubuntu aws
    
-    Note that, By default root cannot login as root user through phpMyAdmin.
-
-    So, open your ssh terminal and type the following command to enable/allow mysql root login access for phpmyadmin on ubuntu aws web server:
+Note that, By default root cannot login as root user through phpMyAdmin.
+So, open your ssh terminal and type the following command to enable/allow mysql root login access for phpmyadmin on ubuntu aws web server:
     
            sudo mysql -u root -p
    
            
            ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
           
-    Note that, Replace password by the root password you entered while installing MySql.
+Note that, Replace password by the root password you entered while installing MySql.
 
-    After that type following query to changes into effect:
+After that type following query to changes into effect:
 
           FLUSH PRIVILEGES;
 

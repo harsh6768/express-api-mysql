@@ -219,6 +219,6 @@ After that type following query to changes into effect:
 <img src="https://github.com/harsh6768/deploy-in-ec2/blob/master/Images/Screenshot%202022-02-03%20at%201.16.17%20PM.png"/>
 
 
-#### You can follow the bellow for better understanding and for step by step commands that you have to follow
+### You can follow the bellow for better understanding and for step by step commands that you have to follow
 
 https://www.tutsmake.com/how-to-install-phpmyadmin-amazon-ec2-ubuntu/

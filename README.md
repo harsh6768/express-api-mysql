@@ -175,11 +175,11 @@ here 18.191.201.10 is the IPv4 Public IP of EC2
   
    Edit apache2.conf file 
   
-        sudo nano /etc/apache2/apache2.conf
+     sudo nano /etc/apache2/apache2.conf
         
-        or 
+      or 
         
-        sudo vi /etc/apache2/apache2.conf
+     sudo vi /etc/apache2/apache2.conf
 
 
    After that, add the following line into apache2.conf file and save it:

@@ -160,6 +160,20 @@ here 18.191.201.10 is the IPv4 Public IP of EC2
 
   
 
+### PHP MYADMIN installation to access MYSQL database .
 
-      
-      
+       sudo apt install phpmyadmin
+ 
+
+<img src="https://github.com/harsh6768/deploy-in-ec2/blob/master/Images/Screenshot%202022-02-03%20at%201.08.00%20PM.png"/>
+
+<img src="https://github.com/harsh6768/deploy-in-ec2/blob/master/Images/Screenshot%202022-02-03%20at%201.08.34%20PM.png"/>
+
+
+<img src="https://github.com/harsh6768/deploy-in-ec2/blob/master/Images/Screenshot%202022-02-03%20at%201.09.21%20PM.png"/>
+
+<img src="https://github.com/harsh6768/deploy-in-ec2/blob/master/Images/Screenshot%202022-02-03%20at%201.15.52%20PM.png"/>
+
+<img src="https://github.com/harsh6768/deploy-in-ec2/blob/master/Images/Screenshot%202022-02-03%20at%201.16.17%20PM.png"/>
+
+
